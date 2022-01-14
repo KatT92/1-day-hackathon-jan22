@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './App.css';
-import DrawCard from "../Cards/DrawCard/index"
+import DrawCard from "../Cards/DrawCardFromDeck/index"
 import ShuffleDeck from "../Cards/ShuffleDeck/index"
 import DisplayCard from "../Cards/DisplayCard/index"
 
@@ -10,7 +10,7 @@ import DisplayHand from "../Cards/DisplayHand/index"
 
 import RestartGame from '../Cards/RestartGame';
 import DiscardCard from '../Cards/DiscardCard';
-
+import DisplayDiscard from '../Cards/DisplayDiscard';
 
 // async function rollDice(num) {
 //   let response = await fetch(`http://roll.diceapi.com/json/d${num}`)
@@ -65,6 +65,7 @@ function App() {
     setDeck(52)
     setCard(card)
     setHand([])
+    setDiscard([])
     return data
   }
     
@@ -94,6 +95,7 @@ setCard(card)
         <AddToHand addToHand={addToHand} hand={hand} card={card}/>
         <DiscardCard discardCard={discardCard}/>
         <DisplayHand hand={hand}/>
+        <DisplayDiscard discard={discard}/>
       </header>
     </div>
   );
