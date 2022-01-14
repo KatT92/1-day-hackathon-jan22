@@ -100,7 +100,7 @@ setCard(card)
 function higherOrLower(string) {
 if (string === "higher") {setString("higher")}
 else if (string === "lower") {setString("lower")}
-
+setBool(true)
 compareCards()
 }
 
