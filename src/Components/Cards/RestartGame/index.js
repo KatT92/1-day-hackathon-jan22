@@ -1,10 +1,10 @@
 import React from "react";
 
-function RestartGame({restartGame}) {
+function RestartGame({restartGame, deckId}) {
 
     return (
         <div>
-        <button onClick={restartGame}>Restart Game</button>
+        <button onClick={()=>{restartGame(deckId)}}>Restart Game</button>
         </div>
     )
     }

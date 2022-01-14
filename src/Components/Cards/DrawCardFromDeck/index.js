@@ -2,10 +2,10 @@ import React from "react";
 
 
 
-function DrawCard({drawCard}) {
+function DrawCard({drawCard, deckId}) {
 return (
 <div>
-    <button onClick={drawCard}>Draw a card</button>
+    <button onClick={()=>{drawCard(deckId)}}>Draw a card</button>
 </div>
 )
 }
